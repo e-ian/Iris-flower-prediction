@@ -30,7 +30,7 @@ def user_input_features():
 
 df = user_input_features()
 
-st.subheader('User input parameters')
+st.subheader('User Input parameters')
 st.write(df)
 
 iris = datasets.load_iris
@@ -48,3 +48,8 @@ st.write(iris.target_names)
 
 st.subheader('Prediction')
 st.write(iris.target_names[prediction])
+
+#st.write(prediction)
+
+st.subheader('Prediction Probability')
+st.write(prediction_proba)
