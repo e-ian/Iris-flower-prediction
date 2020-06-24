@@ -10,9 +10,9 @@ st.write(
     """
 )
 
-st.sidebar.header('User Input Parameters')
+st.sidebar.header('User Input features')
 
-def user_input_params():
+def user_input_features():
     sepal_length = st.sidebar.slider('Sepal length', 4.3, 7.9, 5.4)
     sepal_width = st.sidebar.slider('Sepal width', 2.0, 4.4, 3.4)
     petal_length = st.sidebar.slider('Petal length', 1.0, 6.9, 1.3)
@@ -25,5 +25,9 @@ def user_input_params():
         'petal_width': petal_width
     }
 
-    params = pd.DataFrame(data, index=[0])
+    features = pd.DataFrame(data, index=[0])
     return params
+
+df = user_input_features()
+
+st.subheader()
