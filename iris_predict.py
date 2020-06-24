@@ -1,5 +1,5 @@
 import streamlit as st
-import pandas as import pd
+import pandas as pd
 from sklearn import datasets
 from sklearn.ensemble import RandomForestClassifier
 
@@ -26,14 +26,14 @@ def user_input_features():
     }
 
     features = pd.DataFrame(data, index=[0])
-    return params
+    return features
 
 df = user_input_features()
 
 st.subheader('User Input parameters')
 st.write(df)
 
-iris = datasets.load_iris
+iris = datasets.load_iris()
 X = iris.data
 Y = iris.target
 
